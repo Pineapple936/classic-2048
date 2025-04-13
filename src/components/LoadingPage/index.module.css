@@ -1,0 +1,96 @@
+.loader {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 99999;
+    background: var(--background-color-body);
+}
+
+.loaderInner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 200px;
+    height: 80px;
+    margin: auto;
+}
+
+.loaderLineWrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transform-origin: 50% 100%;
+    animation: spin 1500ms ease infinite;
+    overflow: hidden;
+}
+.loaderLine {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 5px var(--color)) blur(0.5px);
+}
+
+.loaderLineWrap:nth-child(1) { animation-delay: -50ms; }
+.loaderLineWrap:nth-child(2) { animation-delay: -100ms; }
+.loaderLineWrap:nth-child(3) { animation-delay: -150ms; }
+.loaderLineWrap:nth-child(4) { animation-delay: -200ms; }
+.loaderLineWrap:nth-child(5) { animation-delay: -250ms; }
+
+.loaderLineWrap:nth-child(1) { --color: #ff0a54; }
+.loaderLineWrap:nth-child(2) { --color: #ff477e; }
+.loaderLineWrap:nth-child(3) { --color: #ff5c8a; }
+.loaderLineWrap:nth-child(4) { --color: #ff7096; }
+.loaderLineWrap:nth-child(5) { --color: #ff85a1; }
+
+.loaderLineWrap:nth-child(1) .loaderLine {
+    top: 10px;
+    width: 150px;
+    height: 150px;
+    border-color: var(--color);
+}
+.loaderLineWrap:nth-child(2) .loaderLine {
+    top: 20px;
+    height: 130px;
+    width: 130px;
+    border-color: var(--color);
+}
+.loaderLineWrap:nth-child(3) .loaderLine {
+    top: 30px;
+    height: 110px;
+    width: 110px;
+    border-color: var(--color);
+}
+.loaderLineWrap:nth-child(4) .loaderLine {
+    top: 40px;
+    height: 90px;
+    width: 90px;
+    border-color: var(--color);
+}
+.loaderLineWrap:nth-child(5) .loaderLine {
+    top: 50px;
+    width: 70px;
+    height: 70px;
+    border-color: var(--color);
+}
+
+@keyframes spin {
+    0%, 15% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

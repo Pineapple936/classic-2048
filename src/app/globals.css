@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --size-board: 30%;
+    --background-color-card-info: rgb(187,173,160);
+    --border-radius: 10px;
+    --background-color-body: #fbf8ef;
+    --background-color-board: #bbada0;
+    --background-color-cell-default: #ccc3b3;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body { overscroll-behavior: contain; }
+
+.center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spin {
+    animation: spin .5s ease;
+}
+
+@keyframes spin{
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 180deg;
+    }
+}

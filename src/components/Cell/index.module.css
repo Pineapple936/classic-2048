@@ -1,0 +1,21 @@
+.cell {
+    width: calc(100% / 4 - 15px);
+    aspect-ratio: 1 / 1;
+    border-radius: var(--border-radius);
+    background-color: var(--background-color-cell-default);
+}
+
+.cell p {
+    font-size: 1.5rem;
+}
+
+
+@media(hover: hover) {
+    .cell {
+        transition: scale .2s ease;
+    }
+
+    .cell:hover {
+        scale: 1.1;
+    }
+}
